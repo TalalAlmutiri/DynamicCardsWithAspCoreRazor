@@ -1,5 +1,5 @@
 # DynamicCardsWithAspCoreRazor
-ASP core with Razor that display responsive cards horizontally and vertically using Materialize.css 
+ASP core with Razor that displays responsive cards horizontally and vertically using Materialize.css
 
 
 Products table
