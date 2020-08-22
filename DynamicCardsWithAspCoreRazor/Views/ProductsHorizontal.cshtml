@@ -1,0 +1,33 @@
+﻿@model IEnumerable<DynamicCardsWithAspCoreRazor.Models.Products>
+
+<link href="~/css/materialize.min.css" rel="stylesheet" />
+<link href="~/css/Custom.css" rel="stylesheet" />
+<div class="container">
+    @if (Model != null)
+    {
+            <div class="row">
+                @foreach (var item in Model)
+                {
+                <div class="col s12 m12 l6 xl3">
+                    <div class="card rounded">
+                        <h3 class="center teal-text"> @Html.DisplayFor(modelItem => item.ProductName)</h3>
+                        <div class="card-image">
+                            <img class="img" src="/ImgProducts/@Html.DisplayFor(modelItem => item.ProductImage)" />
+                        </div>
+                        <div class="card-content teal center white-text no-padding">
+                            <span class="card-title"><b> @Html.DisplayFor(modelItem => item.ProductPrice) $ </b></span>
+                            <p>
+                                @Html.DisplayFor(modelItem => item.ProductDesc)
+                            </p>
+                        </div>
+                        <div class="card-action teal center">
+                            <a class="btn  amber darken-4 white-text">View</a>
+                        </div>
+                    </div>
+                </div>
+                }
+
+            </div>
+
+    }
+    </div>
